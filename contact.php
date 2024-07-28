@@ -14,8 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $mail->isSMTP();                            
         $mail->Host = 'localhost'; 
         $mail->SMTPAuth = false;                     
-        //$mail->Username = 'zamy@zamymassageandwax.co.uk'; 
-        //$mail->Password = 'Zamayr@132'; 
+     
         $mail->SMTPSecure = 'none';                  
         $mail->Port = 25;                          
 
