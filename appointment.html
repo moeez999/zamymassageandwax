@@ -96,7 +96,7 @@
             </div>
             <a href="contact.html" class="nav-item nav-link">Contact</a>
           </div>
-           <a href="price.html"  class="btn btn-primary d-none d-lg-block"
+         "  <a href="#appointment"  class="btn btn-primary d-none d-lg-block"
             >Book Now</a
           >
         </div>
@@ -134,87 +134,158 @@
           </div>
         </div>
         <div class="row justify-content-center bg-appointment mx-0">
-          <div class="col-lg-6 py-5">
-            <div class="p-5 my-5" style="background: rgba(33, 30, 28, 0.7)">
-              <h1 class="text-white text-center mb-4">Make Appointment</h1>
-              <form>
-                <div class="form-row">
-                  <div class="col-sm-6">
-                    <div class="form-group">
+             <div class="col-lg-6 py-5">
+          <div class="p-5 my-5" style="background: rgba(33, 30, 28, 0.7)">
+            <h1 class="text-white text-center mb-4">Make Appointment</h1>
+
+            <form id="contactForm" name="sentMessage" novalidate="novalidate">
+              <div class="form-row">
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <input
+                      class="form-control bg-transparent p-4"
+                      id="name"
+                      placeholder="Your Name"
+                      required="required"
+                      type="text"
+                    />
+                  </div>
+                </div>
+
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <input
+                      class="form-control bg-transparent p-4"
+                      id="email"
+                      placeholder="Your Email"
+                      required="required"
+                      type="email"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <div class="date" data-target-input="nearest" id="date">
                       <input
+                        class="form-control bg-transparent p-4 datetimepicker-input"
+                        data-target="#date"
+                        data-toggle="datetimepicker"
+                        id="dateInput"
+                        name="date"
+                        placeholder="Select Date"
                         type="text"
-                        class="form-control bg-transparent p-4"
-                        placeholder="Your Name"
-                        required="required"
                       />
                     </div>
                   </div>
-                  <div class="col-sm-6">
-                    <div class="form-group">
+                </div>
+
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <div class="time" data-target-input="nearest" id="time">
                       <input
-                        type="email"
-                        class="form-control bg-transparent p-4"
-                        placeholder="Your Email"
-                        required="required"
+                        class="form-control bg-transparent p-4 datetimepicker-input"
+                        data-target="#time"
+                        data-toggle="datetimepicker"
+                        id="timeInput"
+                        name="time"
+                        placeholder="Select Time"
+                        type="text"
                       />
                     </div>
                   </div>
                 </div>
-                <div class="form-row">
-                  <div class="col-sm-6">
-                    <div class="form-group">
-                      <div class="date" id="date" data-target-input="nearest">
-                        <input
-                          type="text"
-                          class="form-control bg-transparent p-4 datetimepicker-input"
-                          placeholder="Select Date"
-                          data-target="#date"
-                          data-toggle="datetimepicker"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm-6">
-                    <div class="form-group">
-                      <div class="time" id="time" data-target-input="nearest">
-                        <input
-                          type="text"
-                          class="form-control bg-transparent p-4 datetimepicker-input"
-                          placeholder="Select Time"
-                          data-target="#time"
-                          data-toggle="datetimepicker"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="form-row">
-                  <div class="col-sm-6">
-                    <div class="form-group">
-                      <select
-                        class="custom-select bg-transparent px-4"
-                        style="height: 47px"
-                      >
-                        <option selected>Select A Service</option>
-                        <option value="1">Service 1</option>
-                        <option value="2">Service 1</option>
-                        <option value="3">Service 1</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="col-sm-6">
-                    <button
-                      class="btn btn-primary btn-block"
-                      type="submit"
-                      style="height: 47px"
+              </div>
+
+              <div class="form-row">
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <select
+                      class="form-control bg-transparent p-4"
+                      id="service"
+                      required="required"
                     >
-                      Make Appointment
-                    </button>
+                      <option value="" selected disabled>
+                        Select a service
+                      </option>
+
+                      <!-- Massage Services -->
+                      <option value="full-body-massage">
+                        Full Body Massage
+                      </option>
+                      <option value="deep-tissue-massage">
+                        Deep Tissue Massage
+                      </option>
+                      <option value="swedish-massage">Swedish Massage</option>
+                      <option value="promotion">Promotion</option>
+                      <option value="lymphdrainage">Lymphdrainage</option>
+                      <option value="body-scrub">Body Scrub</option>
+
+                      <!-- Waxing Services -->
+                      <optgroup label="Female Waxing">
+                        <option value="full-body-wax-female">
+                          Full Body Wax (Female)
+                        </option>
+                        <option value="hollywood-wax-female">
+                          Hollywood Wax (Female)
+                        </option>
+                        <option value="brazilian-wax-female">
+                          Brazilian Wax (Female)
+                        </option>
+                        <option value="underarm-wax-female">
+                          Underarm Wax (Female)
+                        </option>
+                        <option value="brows-wax-female">
+                          Brows Wax (Female)
+                        </option>
+                        <option value="full-legs-wax-female">
+                          Full Legs Wax (Female)
+                        </option>
+                        <option value="half-legs-wax-female">
+                          Half Legs Wax (Female)
+                        </option>
+                      </optgroup>
+
+                      <optgroup label="Male Waxing">
+                        <option value="full-body-wax-male">
+                          Full Body Wax (Male)
+                        </option>
+                        <option value="hollywood-wax-male">
+                          Hollywood Wax (Male)
+                        </option>
+                        <option value="brazilian-wax-male">
+                          Brazilian Wax (Male)
+                        </option>
+                        <option value="underarm-wax-male">
+                          Underarm Wax (Male)
+                        </option>
+                        <option value="brows-wax-male">Brows Wax (Male)</option>
+                        <option value="full-legs-wax-male">
+                          Full Legs Wax (Male)
+                        </option>
+                        <option value="half-legs-wax-male">
+                          Half Legs Wax (Male)
+                        </option>
+                      </optgroup>
+                    </select>
                   </div>
                 </div>
-              </form>
-            </div>
+
+                <div class="col-sm-6">
+                  <button
+                    class="btn btn-primary btn-block"
+                    style="height: 47px"
+                    type="submit"
+                  >
+                    Make Appointment
+                  </button>
+                </div>
+              </div>
+            </form>
           </div>
+        </div>
         </div>
       </div>
     </div>
