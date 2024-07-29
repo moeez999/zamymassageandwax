@@ -8943,3 +8943,7 @@ h6,
 .treeTidy li:nth-child(4n + 1) {
   border-radius: 2px 3px 0 25px;
 }
+
+.carousel-indicators {
+  display: none !important;
+}

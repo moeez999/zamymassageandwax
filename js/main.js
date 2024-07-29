@@ -104,15 +104,3 @@
     items: 1,
   });
 })(jQuery);
-
-document.addEventListener("DOMContentLoaded", function () {
-  const whatsappLink = document.querySelector(".whatsapp-link");
-  console.log(whatsappLink);
-  const phoneNumber = "+44 7399844722";
-  const message = "Hello! I would like to know more about your services.";
-
-  const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
-    message
-  )}`;
-  whatsappLink.href = whatsappURL;
-});
