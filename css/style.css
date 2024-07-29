@@ -8947,3 +8947,6 @@ h6,
 .carousel-indicators {
   display: none !important;
 }
+.gap-8{
+  gap: 2rem;
+}
