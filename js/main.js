@@ -104,3 +104,10 @@
     items: 1,
   });
 })(jQuery);
+
+document.querySelectorAll(".book-now").forEach((element) => {
+  element.addEventListener("click", function () {
+    sessionStorage.setItem("scrollToAppointment", "true");
+    window.location.href = "index.html";
+  });
+});
