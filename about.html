@@ -2,10 +2,19 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Zamy Massage & Waxing</title>
+    <title>About Zamy - London Mobile Massage & Waxing Therapist | 15+ Years</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <meta content="Free HTML Templates" name="keywords" />
-    <meta content="Free HTML Templates" name="description" />
+    <meta name="description" content="Meet Zamy - London's professional mobile massage and waxing therapist. Qualified beautician with 15+ years experience in luxury spas worldwide. Offers Swedish massage, deep tissue, lymphatic drainage. Home visits available." />
+    <meta name="keywords" content="London massage therapist, qualified beautician London, professional mobile massage, Swedish massage therapist, deep tissue massage London, spa therapist" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.zamymassageandwax.com/about.html" />
+    <meta property="og:title" content="About Zamy - Professional London Mobile Massage Therapist" />
+    <meta property="og:description" content="Qualified massage therapist with 15+ years experience. Offers London mobile massage and waxing services with home visits available." />
+    <meta property="og:image" content="https://www.zamymassageandwax.com/img/logo.png" />
+    
+    <link rel="canonical" href="https://www.zamymassageandwax.com/about.html" />
 
     <!-- Favicon -->
     <link href="img/logo.png" rel="icon" />
@@ -33,9 +42,249 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet" />
+    
+    <!-- Welcome Banner & Animation Styles -->
+    <style>
+      @keyframes slideDown {
+        from {
+          opacity: 0;
+          transform: translateY(-30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes bannerPulse {
+        0% {
+          box-shadow: 0 4px 15px rgba(249, 163, 146, 0.3);
+        }
+        50% {
+          box-shadow: 0 8px 30px rgba(249, 163, 146, 0.6), 0 0 20px rgba(249, 163, 146, 0.4);
+        }
+        100% {
+          box-shadow: 0 4px 15px rgba(249, 163, 146, 0.3);
+        }
+      }
+
+      @keyframes buttonBounce {
+        0%, 100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-5px);
+        }
+      }
+
+      @keyframes buttonGlow {
+        0%, 100% {
+          box-shadow: 0 0 10px rgba(249, 163, 146, 0.5), inset 0 0 10px rgba(255, 255, 255, 0.2);
+        }
+        50% {
+          box-shadow: 0 0 25px rgba(245, 102, 73, 0.8), inset 0 0 15px rgba(255, 255, 255, 0.4);
+        }
+      }
+
+      @keyframes promotionGlow {
+        0%, 100% {
+          text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+        50% {
+          text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(249, 163, 146, 0.6);
+        }
+      }
+
+      #welcomeBanner {
+        z-index: 1000;
+        animation: bannerPulse 3s ease-in-out infinite;
+      }
+
+      .promotion-banner-glow {
+        animation: promotionGlow 2.5s ease-in-out infinite;
+      }
+
+      .btn-primary {
+        animation: buttonGlow 2s ease-in-out infinite;
+        transition: all 0.3s ease;
+      }
+
+      .btn-primary:hover {
+        animation: buttonBounce 0.6s ease-in-out infinite;
+        transform: scale(1.05) !important;
+      }
+
+      .book-now, .book-now-banner {
+        animation: buttonGlow 2s ease-in-out infinite;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .book-now::before, .book-now-banner::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+        animation: shine 3s infinite;
+      }
+
+      @keyframes shine {
+        0% {
+          left: -100%;
+        }
+        100% {
+          left: 100%;
+        }
+      }
+
+      .btn-light {
+        animation: buttonGlow 2s ease-in-out infinite;
+      }
+
+      .btn-light:hover {
+        transform: scale(1.08);
+      }
+
+      /* WhatsApp Integration Styles */
+      .whatsapp-btn {
+        background: #25D366 !important;
+        border: none;
+        color: white !important;
+        transition: all 0.3s ease;
+        animation: whatsappPulse 2s ease-in-out infinite;
+      }
+
+      .whatsapp-btn:hover {
+        background: #20ba5a !important;
+        transform: scale(1.05);
+        box-shadow: 0 0 20px rgba(37, 211, 102, 0.6);
+      }
+
+      @keyframes whatsappPulse {
+        0%, 100% {
+          box-shadow: 0 0 10px rgba(37, 211, 102, 0.4);
+        }
+        50% {
+          box-shadow: 0 0 25px rgba(37, 211, 102, 0.8);
+        }
+      }
+
+      /* Floating WhatsApp Button */
+      .whatsapp-floating {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 60px;
+        height: 60px;
+        background: #25D366;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 30px;
+        color: white;
+        box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+        cursor: pointer;
+        z-index: 999;
+        animation: whatsappBounce 2s ease-in-out infinite;
+        text-decoration: none !important;
+      }
+
+      @keyframes whatsappBounce {
+        0%, 100% {
+          transform: translateY(0) scale(1);
+          box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+        }
+        50% {
+          transform: translateY(-5px) scale(1.1);
+          box-shadow: 0 8px 25px rgba(37, 211, 102, 0.7);
+        }
+      }
+
+      .whatsapp-floating:hover {
+        background: #20ba5a;
+        transform: scale(1.15);
+      }
+
+      @media (max-width: 768px) {
+        .whatsapp-floating {
+          bottom: 20px;
+          right: 20px;
+          width: 55px;
+          height: 55px;
+          font-size: 26px;
+        }
+      }
+      
+      @media (max-width: 768px) {
+        #welcomeBanner {
+          padding: 15px;
+        }
+        #welcomeBanner h3 {
+          font-size: 1.1rem !important;
+        }
+        #welcomeBanner p {
+          font-size: 0.85rem !important;
+        }
+        .btn-light {
+          padding: 0.5rem 1rem !important;
+          font-size: 0.9rem !important;
+        }
+      }
+    </style>
   </head>
 
   <body>
+    <!-- Floating WhatsApp Button -->
+    <a
+      href="https://wa.me/447399844722?text=Hi%20Zamy%2C%20I%27d%20like%20to%20book%20a%20massage%20appointment"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="whatsapp-floating"
+      title="Message us on WhatsApp"
+    >
+      <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Welcome Banner Start -->
+    <div id="welcomeBanner" class="container-fluid" style="background: linear-gradient(135deg, #f9a392 0%, #f56649 100%); padding: 20px; position: relative; box-shadow: 0 4px 15px rgba(249, 163, 146, 0.3); animation: slideDown 0.5s ease-out;">
+      <div class="container">
+        <div class="row align-items-center justify-content-between">
+          <div class="col-md-8">
+            <h3 class="text-white mb-2 mb-md-0" style="font-weight: 600;">
+              <i class="fa fa-star mr-2"></i>Welcome to Zamy Massage & Waxing
+            </h3>
+            <p class="text-white mb-0" style="font-size: 0.95rem; margin-left: 28px;">
+              Book your relaxing mobile massage or waxing appointment today!
+            </p>
+          </div>
+          <div class="col-md-4 text-md-right mt-3 mt-md-0">
+            <div class="d-flex gap-2 justify-content-end flex-wrap">
+              <button class="btn btn-light book-now-banner" style="font-weight: 600; min-width: 130px;">
+                <i class="fa fa-calendar-alt mr-2"></i>Book Now
+              </button>
+              <a
+                href="https://wa.me/447399844722?text=Hi%20Zamy%2C%20I%27d%20like%20to%20book%20a%20massage%20appointment"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn whatsapp-btn"
+                style="font-weight: 600; min-width: 130px; display: flex; align-items: center; justify-content: center;"
+              >
+                <i class="fab fa-whatsapp mr-2"></i>WhatsApp
+              </a>
+            </div>
+          </div>
+          <button id="closeBanner" class="btn btn-link text-white" style="position: absolute; top: 10px; right: 10px; padding: 5px 10px; z-index: 10;">
+            <i class="fa fa-times" style="font-size: 1.5rem;"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Welcome Banner End -->
+
     <!-- Topbar Start -->
     <div class="container-fluid bg-light d-none d-lg-block">
       <div class="row py-2 px-lg-5">
@@ -123,16 +372,25 @@
             >
               About Us
             </h6>
-            <h1 class="mb-4">Premier Massage & Waxing Mobile Services</h1>
+            <h1 class="mb-4">Professional London Mobile Massage & Waxing Therapist</h1>
 
             <p class="pl-4 border-left border-primary">
-              Originally from South America, I am a qualified beautician with
-              over 15 years of experience in luxury cruises and five-star spa
-              hotels worldwide, including London, UK. I trained for two years at
-              a beauty college in South Africa, learning various massage
-              techniques, waxing, facials, and nail care. I’m passionate about
-              my work and offer treatments either at your home or in my beauty
-              room, aiming to provide a relaxing and tailored experience.
+              Zamy is a professional <strong>London mobile massage therapist</strong> with over 15 years of experience in luxury spa treatments. Originally from South America, I am a qualified beautician trained for two years at a beauty college in South Africa, where I mastered Swedish massage, deep tissue massage, lymphatic drainage, waxing, facials, and nail care. I've worked in luxury cruises and five-star spa hotels worldwide, bringing that premium expertise to serve clients across Greater London.
+            </p>
+
+            <h2 style="font-size: 1.3rem; color: #211e1c; margin-top: 2rem; margin-bottom: 1rem;">Why Choose Zamy for Your Mobile Massage in London?</h2>
+            
+            <ul style="margin-bottom: 2rem; line-height: 2;">
+              <li><strong>15+ Years Experience:</strong> Highly trained massage therapist with international spa experience</li>
+              <li><strong>Qualified Professional:</strong> Trained beautician from South African beauty college</li>
+              <li><strong>Home Visit Convenience:</strong> Services delivered throughout Greater London to your home or office</li>
+              <li><strong>Professional & Discreet:</strong> Ensure your complete comfort and privacy</li>
+              <li><strong>Personalized Service:</strong> Each treatment tailored to your specific needs and preferences</li>
+              <li><strong>Trusted in London:</strong> Hundreds of satisfied clients across Central, North, South, East, and West London</li>
+            </ul>
+
+            <p>
+              I'm passionate about my work and offer high-quality treatments either at your home, office, or in my beauty room, aiming to provide a relaxing and tailored experience. Whether you need stress relief through Swedish massage, pain management with deep tissue massage, therapeutic benefits of lymphatic drainage, or professional waxing services, I'm here to help you feel your best. <strong>Contact me today to book your mobile massage appointment in London.</strong>
             </p>
             <!-- <div class="row pt-3">
               <div class="col-6">
@@ -152,6 +410,21 @@
                 </div>
               </div>
             </div> -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Services CTA -->
+      <div class="container py-5">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center">
+            <h2 style="color: #211e1c; margin-bottom: 1rem;">Explore Our London Mobile Massage Services</h2>
+            <p style="font-size: 1.05rem; color: #555; margin-bottom: 2rem;">
+              Learn more about our Swedish massage, deep tissue massage, lymphatic drainage, and professional waxing services available across Greater London.
+            </p>
+            <a href="service.html" class="btn btn-primary btn-lg">
+              <i class="fa fa-spa mr-2"></i>View Our Services
+            </a>
           </div>
         </div>
       </div>
@@ -270,5 +543,28 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    
+    <!-- Welcome Banner JavaScript -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const closeBannerBtn = document.getElementById("closeBanner");
+        const welcomeBanner = document.getElementById("welcomeBanner");
+        
+        if (closeBannerBtn) {
+          closeBannerBtn.addEventListener("click", function () {
+            welcomeBanner.style.animation = "slideDown 0.5s ease-out reverse";
+            setTimeout(() => {
+              welcomeBanner.style.display = "none";
+              localStorage.setItem("welcomeBannerClosed", "true");
+            }, 500);
+          });
+        }
+        
+        // Check if banner was previously closed
+        if (localStorage.getItem("welcomeBannerClosed")) {
+          welcomeBanner.style.display = "none";
+        }
+      });
+    </script>
   </body>
 </html>

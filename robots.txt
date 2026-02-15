@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Disallow admin or private directories
+Disallow: /mail/
+Disallow: /lib/
+
+# Sitemap location
+Sitemap: https://www.zamymassageandwax.com/sitemap.xml

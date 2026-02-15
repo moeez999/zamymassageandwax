@@ -2,10 +2,63 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Zamy Massage &amp; Waxing</title>
+    <title>
+      London Mobile Massage & Waxing Services | Zamy Massage & Waxing
+    </title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <meta content="Free HTML Templates" name="keywords" />
-    <meta content="Free HTML Templates" name="description" />
+    <meta
+      name="description"
+      content="Best London mobile massage and waxing services. Professional therapist with 15+ years experience. Swedish massage, deep tissue, lymphatic drainage, body waxing. Home visits available. Book today: +44 7399844722"
+    />
+    <meta
+      name="keywords"
+      content="London mobile massage, mobile massage London, London massage therapist, deep tissue massage London, Swedish massage London, mobile waxing London, at-home massage, body waxing, massage therapy"
+    />
+    <meta name="author" content="Zamy Massage & Waxing" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.zamymassageandwax.com/" />
+    <meta
+      property="og:title"
+      content="London Mobile Massage & Waxing Services | Zamy"
+    />
+    <meta
+      property="og:description"
+      content="Professional London mobile massage and waxing. Swedish massage, deep tissue, lymphatic drainage. 15+ years experience. Home visits available."
+    />
+    <meta
+      property="og:image"
+      content="https://www.zamymassageandwax.com/img/logo.png"
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://www.zamymassageandwax.com/" />
+    <meta
+      property="twitter:title"
+      content="London Mobile Massage & Waxing Services | Zamy"
+    />
+    <meta
+      property="twitter:description"
+      content="Professional London mobile massage and waxing. Swedish massage, deep tissue, lymphatic drainage. 15+ years experience."
+    />
+    <meta
+      property="twitter:image"
+      content="https://www.zamymassageandwax.com/img/logo.png"
+    />
+
+    <link rel="canonical" href="https://www.zamymassageandwax.com/" />
+
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="css/style.css" as="style" />
+    <link rel="preload" href="img/carousel-1.jpg" as="image" />
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      as="style"
+    />
+
     <!-- Favicon -->
     <link href="img/logo.png" rel="icon" />
     <!-- Google Web Fonts -->
@@ -28,8 +81,300 @@
     />
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet" />
+
+    <!-- Welcome Banner & Animation Styles -->
+    <style>
+      @keyframes slideDown {
+        from {
+          opacity: 0;
+          transform: translateY(-30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes bannerPulse {
+        0% {
+          box-shadow: 0 4px 15px rgba(249, 163, 146, 0.3);
+        }
+        50% {
+          box-shadow:
+            0 8px 30px rgba(249, 163, 146, 0.6),
+            0 0 20px rgba(249, 163, 146, 0.4);
+        }
+        100% {
+          box-shadow: 0 4px 15px rgba(249, 163, 146, 0.3);
+        }
+      }
+
+      @keyframes buttonBounce {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-5px);
+        }
+      }
+
+      @keyframes buttonGlow {
+        0%,
+        100% {
+          box-shadow:
+            0 0 10px rgba(249, 163, 146, 0.5),
+            inset 0 0 10px rgba(255, 255, 255, 0.2);
+        }
+        50% {
+          box-shadow:
+            0 0 25px rgba(245, 102, 73, 0.8),
+            inset 0 0 15px rgba(255, 255, 255, 0.4);
+        }
+      }
+
+      @keyframes promotionGlow {
+        0%,
+        100% {
+          text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+        50% {
+          text-shadow:
+            0 0 20px rgba(255, 255, 255, 0.8),
+            0 0 30px rgba(249, 163, 146, 0.6);
+        }
+      }
+
+      #welcomeBanner {
+        z-index: 1000;
+        animation: bannerPulse 3s ease-in-out infinite;
+      }
+
+      .promotion-banner-glow {
+        animation: promotionGlow 2.5s ease-in-out infinite;
+      }
+
+      .btn-primary {
+        animation: buttonGlow 2s ease-in-out infinite;
+        transition: all 0.3s ease;
+      }
+
+      .btn-primary:hover {
+        animation: buttonBounce 0.6s ease-in-out infinite;
+        transform: scale(1.05) !important;
+      }
+
+      .book-now,
+      .book-now-banner {
+        animation: buttonGlow 2s ease-in-out infinite;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .book-now::before,
+      .book-now-banner::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.3),
+          transparent
+        );
+        animation: shine 3s infinite;
+      }
+
+      @keyframes shine {
+        0% {
+          left: -100%;
+        }
+        100% {
+          left: 100%;
+        }
+      }
+
+      .btn-light {
+        animation: buttonGlow 2s ease-in-out infinite;
+      }
+
+      .btn-light:hover {
+        transform: scale(1.08);
+      }
+
+      /* WhatsApp Integration Styles */
+      .whatsapp-btn {
+        background: #25d366 !important;
+        border: none;
+        color: white !important;
+        transition: all 0.3s ease;
+        animation: whatsappPulse 2s ease-in-out infinite;
+      }
+
+      .whatsapp-btn:hover {
+        background: #20ba5a !important;
+        transform: scale(1.05);
+        box-shadow: 0 0 20px rgba(37, 211, 102, 0.6);
+      }
+
+      @keyframes whatsappPulse {
+        0%,
+        100% {
+          box-shadow: 0 0 10px rgba(37, 211, 102, 0.4);
+        }
+        50% {
+          box-shadow: 0 0 25px rgba(37, 211, 102, 0.8);
+        }
+      }
+
+      /* Floating WhatsApp Button */
+      .whatsapp-floating {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 60px;
+        height: 60px;
+        background: #25d366;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 30px;
+        color: white;
+        box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+        cursor: pointer;
+        z-index: 999;
+        animation: whatsappBounce 2s ease-in-out infinite;
+        text-decoration: none !important;
+      }
+
+      @keyframes whatsappBounce {
+        0%,
+        100% {
+          transform: translateY(0) scale(1);
+          box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+        }
+        50% {
+          transform: translateY(-5px) scale(1.1);
+          box-shadow: 0 8px 25px rgba(37, 211, 102, 0.7);
+        }
+      }
+
+      .whatsapp-floating:hover {
+        background: #20ba5a;
+        transform: scale(1.15);
+      }
+
+      @media (max-width: 768px) {
+        .whatsapp-floating {
+          bottom: 20px;
+          right: 20px;
+          width: 55px;
+          height: 55px;
+          font-size: 26px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        #welcomeBanner {
+          padding: 15px;
+        }
+        #welcomeBanner h3 {
+          font-size: 1.1rem !important;
+        }
+        #welcomeBanner p {
+          font-size: 0.85rem !important;
+        }
+        .btn-light {
+          padding: 0.5rem 1rem !important;
+          font-size: 0.9rem !important;
+        }
+      }
+    </style>
   </head>
   <body>
+    <!-- Floating WhatsApp Button -->
+    <a
+      href="https://wa.me/447399844722?text=Hi%20Zamy%2C%20I%27d%20like%20to%20book%20a%20massage%20appointment"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="whatsapp-floating"
+      title="Message us on WhatsApp"
+    >
+      <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Welcome Banner Start -->
+    <div
+      id="welcomeBanner"
+      class="container-fluid"
+      style="
+        background: linear-gradient(135deg, #f9a392 0%, #f56649 100%);
+        padding: 20px;
+        position: relative;
+        box-shadow: 0 4px 15px rgba(249, 163, 146, 0.3);
+        animation: slideDown 0.5s ease-out;
+      "
+    >
+      <div class="container">
+        <div class="row align-items-center justify-content-between">
+          <div class="col-md-8">
+            <h3 class="text-white mb-2 mb-md-0" style="font-weight: 600">
+              <i class="fa fa-star mr-2"></i>Welcome to Zamy Massage & Waxing
+            </h3>
+            <p
+              class="text-white mb-0"
+              style="font-size: 0.95rem; margin-left: 28px"
+            >
+              Book your relaxing mobile massage or waxing appointment today!
+            </p>
+          </div>
+          <div class="col-md-4 text-md-right mt-3 mt-md-0">
+            <div class="d-flex gap-2 justify-content-end flex-wrap">
+              <button
+                class="btn btn-light book-now-banner"
+                style="font-weight: 600; min-width: 130px"
+              >
+                <i class="fa fa-calendar-alt mr-2"></i>Book Now
+              </button>
+              <a
+                href="https://wa.me/447399844722?text=Hi%20Zamy%2C%20I%27d%20like%20to%20book%20a%20massage%20appointment"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn whatsapp-btn"
+                style="
+                  font-weight: 600;
+                  min-width: 130px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                "
+              >
+                <i class="fab fa-whatsapp mr-2"></i>WhatsApp
+              </a>
+            </div>
+          </div>
+          <button
+            id="closeBanner"
+            class="btn btn-link text-white"
+            style="
+              position: absolute;
+              top: 10px;
+              right: 10px;
+              padding: 5px 10px;
+              z-index: 10;
+            "
+          >
+            <i class="fa fa-times" style="font-size: 1.5rem"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Welcome Banner End -->
+
     <!-- Topbar Start -->
     <div class="container-fluid bg-light d-none d-lg-block">
       <div class="row py-2 px-lg-5">
@@ -84,6 +429,44 @@
       </nav>
     </div>
     <!-- Navbar End -->
+    <!-- Promotion Banner Start -->
+    <div class="container-fluid bg-primary py-4 mb-4">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-8">
+            <h4 class="text-white mb-2 mb-lg-0">
+              <i class="fa fa-gift mr-2"></i>EXCLUSIVE PROMOTION
+            </h4>
+          </div>
+          <div class="col-lg-4 text-lg-right">
+            <h5 class="text-white mb-0 promotion-banner-glow">
+              <span style="font-size: 1.3em; font-weight: bold"
+                >🎁 2 Hours Massage £140 + FREE Body Scrub!</span
+              >
+            </h5>
+            <p
+              class="text-white mt-2"
+              style="font-size: 0.85rem; margin-bottom: 0"
+            >
+              <a
+                href="https://wa.me/447399844722?text=Hi%20Zamy%2C%20I%27m%20interested%20in%20the%202%20hour%20massage%20promotion"
+                target="_blank"
+                rel="noopener noreferrer"
+                style="
+                  color: white;
+                  text-decoration: underline;
+                  font-weight: 500;
+                "
+              >
+                <i class="fab fa-whatsapp"></i> Ask about this deal
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Promotion Banner End -->
+
     <!-- Carousel Start -->
 
     <div class="container-fluid p-0 mb-5 pb-5">
@@ -124,18 +507,24 @@
                   Massage &amp; Waxing
                 </h6>
 
-                <h3 class="display-3 text-capitalize text-white mb-3">
-                  Massage Treatment and Waxing
-                </h3>
+                <h1 class="display-3 text-capitalize text-white mb-3">
+                  London Mobile Massage & Waxing Services
+                </h1>
 
                 <p class="mx-md-5 px-5">
-                  Indulge in my massage treatments and waxing services, designed
-                  to soothe your body and mind. Experience ultimate relaxation
-                  as our skilled therapists work their magicccc.
+                  Professional mobile massage and waxing services across London.
+                  Specialist therapist with 15+ years experience. Swedish
+                  massage, deep tissue, lymphatic drainage & full body waxing.
+                  In-home appointments available.
                 </p>
                 <a
                   href="#appointment"
-                  class="btn btn-outline-light py-3 px-4 mt-3 animate__animated animate__fadeInUp"
+                  class="btn btn-outline-light py-3 px-4 mt-3 animate__animated animate__fadeInUp book-now"
+                  style="
+                    font-weight: 600;
+                    border-width: 2px;
+                    transition: all 0.3s ease;
+                  "
                   >Make Appointment</a
                 >
               </div>
@@ -162,19 +551,24 @@
                   Massage &amp; Waxing
                 </h6>
 
-                <h3 class="display-3 text-capitalize text-white mb-3">
-                  Deep tissue massage
-                </h3>
+                <h2 class="display-3 text-capitalize text-white mb-3">
+                  Deep Tissue Massage in London
+                </h2>
 
                 <p class="mx-md-5 px-5">
-                  Deep muscle techniques target chronic tension in muscles
-                  located deep beneath the body&#39;s surface. These techniques
-                  involve slow strokes, direct pressure, and friction movements
-                  that work across the muscle fibers.
+                  Expert deep tissue massage therapy targeting chronic tension.
+                  Available for mobile visits throughout Greater London. Our
+                  qualified therapist uses professional techniques for pain
+                  relief and muscle recovery.
                 </p>
                 <a
                   href="#appointment"
-                  class="btn btn-outline-light py-3 px-4 mt-3 animate__animated animate__fadeInUp"
+                  class="btn btn-outline-light py-3 px-4 mt-3 animate__animated animate__fadeInUp book-now"
+                  style="
+                    font-weight: 600;
+                    border-width: 2px;
+                    transition: all 0.3s ease;
+                  "
                   >Make Appointment</a
                 >
               </div>
@@ -201,19 +595,24 @@
                   Massage &amp; Waxing
                 </h6>
 
-                <h3 class="display-3 text-capitalize text-white mb-3">
-                  Lymphatic Drainage Massage
-                </h3>
+                <h2 class="display-3 text-capitalize text-white mb-3">
+                  Lymphatic Drainage Massage - Mobile Service
+                </h2>
 
                 <p class="mx-md-5 px-5">
-                  This gentle massage promotes lymph fluid flow and helps reduce
-                  lymphedema symptoms. By boosting your body&#39;s natural
-                  detoxification, it aids in removing waste and toxins, leaving
-                  you refreshed and revitalized.
+                  Therapeutic lymphatic drainage available as a mobile service
+                  across London. Gentle technique promotes natural
+                  detoxification and reduces swelling. Book your home visit
+                  today.
                 </p>
                 <a
                   href="#appointment"
-                  class="btn btn-outline-light py-3 px-4 mt-3 animate__animated animate__fadeInUp"
+                  class="btn btn-outline-light py-3 px-4 mt-3 animate__animated animate__fadeInUp book-now"
+                  style="
+                    font-weight: 600;
+                    border-width: 2px;
+                    transition: all 0.3s ease;
+                  "
                   >Make Appointment</a
                 >
               </div>
@@ -227,7 +626,9 @@
             <img
               class="position-absolute w-100 h-100"
               src="img/carousel-1.jpg"
+              alt="Swedish Massage London - Relaxing Spa Treatment"
               style="object-fit: cover"
+              loading="lazy"
             />
             <div
               class="carousel-caption d-flex flex-column align-items-center justify-content-center"
@@ -240,20 +641,24 @@
                   Massage &amp; Waxing
                 </h6>
 
-                <h3 class="display-3 text-capitalize text-white mb-3">
-                  Swedish Massage
-                </h3>
+                <h2 class="display-3 text-capitalize text-white mb-3">
+                  Swedish Massage in London
+                </h2>
 
                 <p class="mx-md-5 px-5">
-                  Swedish massage is one of the most popular forms of massage
-                  therapy. It is commonly used to promote relaxation, alleviate
-                  stress, and relieve pain. This technique typically involves a
-                  combination of rubbing, kneading, stroking, and tapping the
-                  muscles.
+                  London's premier Swedish massage service - stress relief and
+                  relaxation. Mobile therapist brings professional spa
+                  treatments to your home. Expert technique using rubbing,
+                  kneading, and stroking for total relaxation.
                 </p>
                 <a
                   href="#appointment"
-                  class="btn btn-outline-light py-3 px-4 mt-3 animate__animated animate__fadeInUp"
+                  class="btn btn-outline-light py-3 px-4 mt-3 animate__animated animate__fadeInUp book-now"
+                  style="
+                    font-weight: 600;
+                    border-width: 2px;
+                    transition: all 0.3s ease;
+                  "
                   >Make Appointment</a
                 >
               </div>
@@ -269,10 +674,10 @@
         <div class="row align-items-center">
           <div class="col-lg-6 pb-5 pb-lg-0">
             <img
-              alt="Zamy Massage &amp; Wax"
+              alt="About Zamy Massage & Wax - Professional Beauty Therapist"
               class="img-fluid"
-              src="img/about.jpg
-"
+              src="img/about.jpg"
+              loading="lazy"
             />
           </div>
 
@@ -283,22 +688,160 @@
               About Us
             </h6>
 
-            <h1 class="mb-4">Premier Massage &amp; waxing Mobile Services</h1>
+            <h2 class="mb-4">
+              London Mobile Massage & Waxing - Expert Service
+            </h2>
 
             <p class="pl-4 border-left border-primary">
-              Originally from South America, I am a qualified beautician with
-              over 15 years of experience in luxury cruises and five-star spa
-              hotels worldwide, including London, UK. I trained for two years at
-              a beauty college in South Africa, learning various massage
-              techniques, waxing, facials, and nail care. I&rsquo;m passionate
-              about my work and offer treatments either at your home or in my
-              beauty room, aiming to provide a relaxing and tailored experience.
+              Professional London mobile massage therapist with over 15 years
+              experience in luxury spa treatments. Qualified beautician trained
+              in South Africa, offers home visits throughout Greater London
+              including Swedish massage, deep tissue, lymphatic drainage, and
+              premium waxing services. I trained for two years at a beauty
+              college in South Africa, learning various massage techniques,
+              waxing, facials, and nail care. I&rsquo;m passionate about my work
+              and offer treatments either at your home or in my beauty room,
+              aiming to provide a relaxing and tailored experience.
             </p>
           </div>
         </div>
       </div>
     </div>
-    <!-- About End --><!-- Service Start -->
+    <!-- About End -->
+
+    <!-- Local SEO Section Start -->
+    <div class="container-fluid bg-light py-5">
+      <div class="container py-5">
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <h2 class="text-center mb-4" style="color: #211e1c">
+              Mobile Massage & Waxing Across Greater London
+            </h2>
+
+            <p
+              style="
+                font-size: 1.05rem;
+                line-height: 1.8;
+                color: #444;
+                margin-bottom: 2rem;
+              "
+            >
+              Zamy provides professional mobile massage and waxing services
+              across Greater London, bringing relaxing treatments directly to
+              your home, hotel, office, or accommodation. With over 15 years of
+              experience in luxury spa treatments, we are trusted by hundreds of
+              happy clients for our professional, discreet, and high-quality
+              services. Whether you're looking for a stress-relieving Swedish
+              massage, targeted deep tissue massage, therapeutic lymphatic
+              drainage, or professional waxing, we deliver personalized
+              treatments tailored to your needs.
+            </p>
+
+            <h3 style="color: #211e1c; margin-top: 2rem; margin-bottom: 1rem">
+              Mobile Massage Services Available in London Areas:
+            </h3>
+
+            <div class="row">
+              <div class="col-md-6">
+                <ul style="list-style: none; padding: 0; line-height: 2">
+                  <li>
+                    <i
+                      class="fa fa-check"
+                      style="color: #f9a392; margin-right: 10px"
+                    ></i
+                    ><strong>Mobile Massage in Central London</strong>
+                  </li>
+                  <li>
+                    <i
+                      class="fa fa-check"
+                      style="color: #f9a392; margin-right: 10px"
+                    ></i
+                    ><strong>Mobile Massage in North London</strong>
+                  </li>
+                  <li>
+                    <i
+                      class="fa fa-check"
+                      style="color: #f9a392; margin-right: 10px"
+                    ></i
+                    ><strong>Mobile Massage in South London</strong>
+                  </li>
+                  <li>
+                    <i
+                      class="fa fa-check"
+                      style="color: #f9a392; margin-right: 10px"
+                    ></i
+                    ><strong>Mobile Massage in East London</strong>
+                  </li>
+                  <li>
+                    <i
+                      class="fa fa-check"
+                      style="color: #f9a392; margin-right: 10px"
+                    ></i
+                    ><strong>Mobile Massage in West London</strong>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <ul style="list-style: none; padding: 0; line-height: 2">
+                  <li>
+                    <i
+                      class="fa fa-check"
+                      style="color: #f9a392; margin-right: 10px"
+                    ></i
+                    >Swedish Massage at Home London
+                  </li>
+                  <li>
+                    <i
+                      class="fa fa-check"
+                      style="color: #f9a392; margin-right: 10px"
+                    ></i
+                    >Deep Tissue Massage in London
+                  </li>
+                  <li>
+                    <i
+                      class="fa fa-check"
+                      style="color: #f9a392; margin-right: 10px"
+                    ></i
+                    >Lymphatic Drainage Massage London
+                  </li>
+                  <li>
+                    <i
+                      class="fa fa-check"
+                      style="color: #f9a392; margin-right: 10px"
+                    ></i
+                    >Professional Body Waxing London
+                  </li>
+                  <li>
+                    <i
+                      class="fa fa-check"
+                      style="color: #f9a392; margin-right: 10px"
+                    ></i
+                    >Home Visit Massage Service
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <p
+              style="
+                font-size: 0.95rem;
+                color: #666;
+                margin-top: 2rem;
+                font-style: italic;
+              "
+            >
+              If you're looking for a reliable London mobile massage therapist
+              or professional waxing service, Zamy is here for you. Book today
+              for a relaxing, professional, and discreet service delivered right
+              to your location.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Local SEO Section End -->
+
+    <!-- Service Start -->
 
     <div class="container-fluid px-0 py-5 my-5">
       <div class="row mx-0 justify-content-center text-center mt-4">
@@ -309,16 +852,19 @@
             My Services
           </h6>
 
-          <h1>Massage &amp; Waxing Services</h1>
+          <h2>Mobile Massage & Waxing Services in London</h2>
         </div>
       </div>
 
       <div class="owl-carousel service-carousel">
         <div class="service-item position-relative">
           <img
-            alt="Zamy Massage &amp; Wax"
+            alt="Deep Tissue Massage London - Zamy Therapy"
             class="img-fluid"
             src="img/service-1.jpg"
+            loading="lazy"
+            width="350"
+            height="450"
           />
           <div class="service-text text-center">
             <h4 class="text-white font-weight-medium px-3">
@@ -338,11 +884,12 @@
 
         <div class="service-item position-relative">
           <img
-            alt="Zamy Massage &amp; Wax"
+            alt="Swedish Massage Therapy London - Zamy Spa"
             class="img-fluid"
-            src="img/service-2.jpg
-
-"
+            src="img/service-2.jpg"
+            loading="lazy"
+            width="350"
+            height="450"
           />
           <div class="service-text text-center">
             <h4 class="text-white font-weight-medium px-3">Swedish Massage</h4>
@@ -360,9 +907,12 @@
 
         <div class="service-item position-relative">
           <img
-            alt="Zamy Massage &amp; Wax"
+            alt="Lymph Drainage Massage London - Wellness Treatment"
             class="img-fluid"
             src="img/service-4.jpg"
+            loading="lazy"
+            width="350"
+            height="450"
           />
           <div class="service-text text-center">
             <h4 class="text-white font-weight-medium px-3">
@@ -382,9 +932,12 @@
 
         <div class="service-item position-relative">
           <img
-            alt="Zamy Massage &amp; Wax"
+            alt="Body Scrub Treatment London - Exfoliation Service"
             class="img-fluid"
             src="img/bodyscrub.jpeg"
+            loading="lazy"
+            width="350"
+            height="450"
           />
           <div class="service-text text-center">
             <h4 class="text-white font-weight-medium px-3">Body Scrub</h4>
@@ -412,7 +965,7 @@
 
       <div class="container-fluid py-5 row justify-content-center px-lg-5">
         <div class="col-lg-6">
-          <h1 class="text-center my-4">Female Waxing</h1>
+          <h3 class="text-center my-4">Female Waxing</h3>
 
           <ul class="treeTidy" id="waxing-services-list">
             <li class="list-group-item fade-in">Full body - &pound;80</li>
@@ -426,7 +979,7 @@
         </div>
 
         <div class="col-lg-6">
-          <h1 class="text-center my-4">Male Waxing</h1>
+          <h3 class="text-center my-4">Male Waxing</h3>
 
           <ul class="treeTidy" id="waxing-services-list">
             <li class="list-group-item fade-in">Full body - &pound;90</li>
@@ -440,163 +993,399 @@
         </div>
       </div>
 
-      <div
-        class="row justify-content-center bg-appointment mx-0"
-        id="appointment"
-      >
-        <div class="col-lg-6 py-5">
-          <div class="p-5 my-5" style="background: rgba(33, 30, 28, 0.7)">
-            <h1 class="text-white text-center mb-4">Make Appointment</h1>
+      <div class="row justify-content-center mx-0"></div>
+    </div>
+    <!-- Service End -->
 
-            <form id="contactForm" name="sentMessage" novalidate="novalidate">
-              <div class="form-row">
-                <div class="col-sm-6">
-                  <div class="form-group">
-                    <input
-                      class="form-control bg-transparent p-4"
-                      id="name"
-                      placeholder="Your Name"
-                      required="required"
-                      type="text"
-                    />
-                  </div>
+    <!-- Appointment Section -->
+
+    <div
+      class="row justify-content-center bg-appointment mx-0"
+      id="appointment"
+    >
+      <div class="col-lg-8 py-5">
+        <div
+          class="p-5 my-5"
+          style="
+            background: linear-gradient(
+              135deg,
+              rgba(33, 30, 28, 0.85) 0%,
+              rgba(33, 30, 28, 0.95) 100%
+            );
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+          "
+        >
+          <h2
+            class="text-white text-center mb-4"
+            style="font-size: 32px; font-weight: 700"
+          >
+            Make Your Appointment
+          </h2>
+          <p
+            class="text-center text-white mb-4"
+            style="font-size: 0.95rem; color: #f9a392"
+          >
+            📞 Call +44 7399844722 or fill the form below - we'll respond within
+            1 hour
+          </p>
+
+          <div class="row text-center mb-3">
+            <div class="col-md-4 mb-2">
+              <a
+                href="https://wa.me/447399844722?text=Hi%20Zamy%2C%20I%27d%20like%20to%20book%20a%20massage%20appointment"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="card border-0 shadow-sm h-100 text-decoration-none rounded-lg"
+                style="border-radius: 12px"
+              >
+                <div class="card-body py-2 px-2">
+                  <i class="fab fa-whatsapp fa-lg text-success mb-1"></i>
+                  <h6 class="mb-1 text-dark" style="font-size: 0.9rem">
+                    WhatsApp Chat
+                  </h6>
+                  <p class="mb-0 text-muted" style="font-size: 0.8rem">
+                    Fast & convenient
+                  </p>
                 </div>
-
-                <div class="col-sm-6">
-                  <div class="form-group">
-                    <input
-                      class="form-control bg-transparent p-4"
-                      id="email"
-                      placeholder="Your Email"
-                      required="required"
-                      type="email"
-                    />
-                  </div>
+              </a>
+            </div>
+            <div class="col-md-4 mb-2">
+              <a
+                href="tel:+447399844722"
+                class="card border-0 shadow-sm h-100 text-decoration-none rounded-lg"
+                style="border-radius: 12px"
+              >
+                <div class="card-body py-2 px-2">
+                  <i class="fas fa-phone-alt fa-lg text-primary mb-1"></i>
+                  <h6 class="mb-1 text-dark" style="font-size: 0.9rem">
+                    Call Direct
+                  </h6>
+                  <p class="mb-0 text-muted" style="font-size: 0.8rem">
+                    +44 7399844722
+                  </p>
                 </div>
-              </div>
-
-              <div class="form-row">
-                <div class="col-sm-6">
-                  <div class="form-group">
-                    <div class="date" data-target-input="nearest" id="date">
-                      <input
-                        class="form-control bg-transparent p-4 datetimepicker-input"
-                        data-target="#date"
-                        data-toggle="datetimepicker"
-                        id="dateInput"
-                        name="date"
-                        placeholder="Select Date"
-                        type="text"
-                      />
-                    </div>
-                  </div>
+              </a>
+            </div>
+            <div class="col-md-4 mb-2">
+              <a
+                href="mailto:Zamaryr@hotmail.com"
+                class="card border-0 shadow-sm h-100 text-decoration-none rounded-lg"
+                style="border-radius: 12px"
+              >
+                <div class="card-body py-2 px-2">
+                  <i class="fas fa-envelope fa-lg text-warning mb-1"></i>
+                  <h6 class="mb-1 text-dark" style="font-size: 0.9rem">
+                    Email Us
+                  </h6>
+                  <p class="mb-0 text-muted" style="font-size: 0.8rem">
+                    Zamaryr@hotmail.com
+                  </p>
                 </div>
-
-                <div class="col-sm-6">
-                  <div class="form-group">
-                    <div class="time" data-target-input="nearest" id="time">
-                      <input
-                        class="form-control bg-transparent p-4 datetimepicker-input"
-                        data-target="#time"
-                        data-toggle="datetimepicker"
-                        id="timeInput"
-                        name="time"
-                        placeholder="Select Time"
-                        type="text"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="form-row">
-                <div class="col-sm-6">
-                  <div class="form-group">
-                    <select
-                      class="form-control bg-transparent p-4"
-                      id="service"
-                      required="required"
-                    >
-                      <optgroup label="Massage">
-                        <option value="" selected disabled>
-                          Select a service
-                        </option>
-                        <!-- Massage Services -->
-                        <option value="swedish-massage">Swedish Massage</option>
-                        <option value="deep-tissue-massage">
-                          Deep Tissue Massage
-                        </option>
-                        <option value="lymphdrainage">Lymphdrainage</option>
-                        <option value="promotion">Promotion 2 hours</option>
-                        <option value="body-scrub">Body Scrub</option>
-                      </optgroup>
-
-                      <!-- Waxing Services -->
-                      <optgroup label="Female Waxing">
-                        <option value="full-body-wax-female">
-                          Full Body Wax (Female)
-                        </option>
-                        <option value="hollywood-wax-female">
-                          Hollywood Wax (Female)
-                        </option>
-                        <option value="brazilian-wax-female">
-                          Brazilian Wax (Female)
-                        </option>
-                        <option value="underarm-wax-female">
-                          Underarm Wax (Female)
-                        </option>
-                        <option value="brows-wax-female">
-                          Brows Wax (Female)
-                        </option>
-                        <option value="full-legs-wax-female">
-                          Full Legs Wax (Female)
-                        </option>
-                        <option value="half-legs-wax-female">
-                          Half Legs Wax (Female)
-                        </option>
-                      </optgroup>
-
-                      <optgroup label="Male Waxing">
-                        <option value="full-body-wax-male">
-                          Full Body Wax (Male)
-                        </option>
-                        <option value="hollywood-wax-male">
-                          Hollywood Wax (Male)
-                        </option>
-                        <option value="brazilian-wax-male">
-                          Brazilian Wax (Male)
-                        </option>
-                        <option value="underarm-wax-male">
-                          Underarm Wax (Male)
-                        </option>
-                        <option value="brows-wax-male">Brows Wax (Male)</option>
-                        <option value="full-legs-wax-male">
-                          Full Legs Wax (Male)
-                        </option>
-                        <option value="half-legs-wax-male">
-                          Half Legs Wax (Male)
-                        </option>
-                      </optgroup>
-                    </select>
-                  </div>
-                </div>
-
-                <div class="col-sm-6">
-                  <button
-                    class="btn btn-primary btn-block"
-                    style="height: 47px"
-                    type="submit"
-                  >
-                    Make Appointment
-                  </button>
-                </div>
-              </div>
-            </form>
+              </a>
+            </div>
           </div>
+
+          <form id="contactForm" name="sentMessage" novalidate="novalidate">
+            <div class="form-row">
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label
+                    class="text-white"
+                    style="
+                      font-size: 0.9rem;
+                      font-weight: 600;
+                      margin-bottom: 8px;
+                      display: block;
+                    "
+                    >Full Name *</label
+                  >
+                  <input
+                    class="form-control p-3"
+                    id="name"
+                    placeholder="Your Name"
+                    required="required"
+                    type="text"
+                    style="
+                      background: rgba(255, 255, 255, 0.95);
+                      border: 2px solid #ddd;
+                      border-radius: 8px;
+                      transition: all 0.3s;
+                    "
+                  />
+                </div>
+              </div>
+
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label
+                    class="text-white"
+                    style="
+                      font-size: 0.9rem;
+                      font-weight: 600;
+                      margin-bottom: 8px;
+                      display: block;
+                    "
+                    >Email *</label
+                  >
+                  <input
+                    class="form-control p-3"
+                    id="email"
+                    placeholder="Your Email"
+                    required="required"
+                    type="email"
+                    style="
+                      background: rgba(255, 255, 255, 0.95);
+                      border: 2px solid #ddd;
+                      border-radius: 8px;
+                      transition: all 0.3s;
+                    "
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label
+                    class="text-white"
+                    style="
+                      font-size: 0.9rem;
+                      font-weight: 600;
+                      margin-bottom: 8px;
+                      display: block;
+                    "
+                    >Phone</label
+                  >
+                  <input
+                    class="form-control p-3"
+                    id="phone"
+                    name="phone"
+                    placeholder="Your Phone"
+                    type="tel"
+                    style="
+                      background: rgba(255, 255, 255, 0.95);
+                      border: 2px solid #ddd;
+                      border-radius: 8px;
+                      transition: all 0.3s;
+                    "
+                  />
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label
+                    class="text-white"
+                    style="
+                      font-size: 0.9rem;
+                      font-weight: 600;
+                      margin-bottom: 8px;
+                      display: block;
+                    "
+                    >Preferred Date</label
+                  >
+                  <div class="date" data-target-input="nearest" id="date">
+                    <input
+                      class="form-control p-3 datetimepicker-input"
+                      data-target="#date"
+                      data-toggle="datetimepicker"
+                      id="dateInput"
+                      name="date"
+                      placeholder="Select Date"
+                      type="text"
+                      style="
+                        background: rgba(255, 255, 255, 0.95);
+                        border: 2px solid #ddd;
+                        border-radius: 8px;
+                        transition: all 0.3s;
+                      "
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label
+                    class="text-white"
+                    style="
+                      font-size: 0.9rem;
+                      font-weight: 600;
+                      margin-bottom: 8px;
+                      display: block;
+                    "
+                    >Preferred Time</label
+                  >
+                  <div class="time" data-target-input="nearest" id="time">
+                    <input
+                      class="form-control p-3 datetimepicker-input"
+                      data-target="#time"
+                      data-toggle="datetimepicker"
+                      id="timeInput"
+                      name="time"
+                      placeholder="Select Time"
+                      type="text"
+                      style="
+                        background: rgba(255, 255, 255, 0.95);
+                        border: 2px solid #ddd;
+                        border-radius: 8px;
+                        transition: all 0.3s;
+                      "
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label
+                    class="text-white"
+                    style="
+                      font-size: 0.9rem;
+                      font-weight: 600;
+                      margin-bottom: 8px;
+                      display: block;
+                    "
+                    >Service *</label
+                  >
+                  <select
+                    class="form-control p-3"
+                    id="service"
+                    required="required"
+                    style="
+                      background: rgba(255, 255, 255, 0.95);
+                      border: 2px solid #ddd;
+                      border-radius: 8px;
+                      transition: all 0.3s;
+                      cursor: pointer;
+                    "
+                  >
+                    <optgroup label="Massage Services">
+                      <option value="" selected disabled>
+                        Select a service
+                      </option>
+                      <option value="swedish-massage">
+                        🧖 Swedish Massage - £70
+                      </option>
+                      <option value="deep-tissue-massage">
+                        💪 Deep Tissue - £70
+                      </option>
+                      <option value="lymph-drainage">
+                        🌿 Lymphatic Drainage - £100
+                      </option>
+                      <option value="body-scrub">✨ Body Scrub - £50</option>
+                      <option value="promo-2h">
+                        🎁 2H Massage + FREE Scrub - £140
+                      </option>
+                    </optgroup>
+
+                    <optgroup label="Female Waxing">
+                      <option value="full-body-wax-female">
+                        Full Body Wax
+                      </option>
+                      <option value="hollywood-wax-female">
+                        Hollywood Wax
+                      </option>
+                      <option value="brazilian-wax-female">
+                        Brazilian Wax
+                      </option>
+                      <option value="underarm-wax-female">Underarm Wax</option>
+                      <option value="brows-wax-female">Brows Wax</option>
+                      <option value="full-legs-wax-female">
+                        Full Legs Wax
+                      </option>
+                      <option value="half-legs-wax-female">
+                        Half Legs Wax
+                      </option>
+                    </optgroup>
+
+                    <optgroup label="Male Waxing">
+                      <option value="full-body-wax-male">Full Body Wax</option>
+                      <option value="hollywood-wax-male">Hollywood Wax</option>
+                      <option value="brazilian-wax-male">Brazilian Wax</option>
+                      <option value="underarm-wax-male">Underarm Wax</option>
+                      <option value="brows-wax-male">Brows Wax</option>
+                      <option value="full-legs-wax-male">Full Legs Wax</option>
+                      <option value="half-legs-wax-male">Half Legs Wax</option>
+                    </optgroup>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label
+                class="text-white"
+                style="
+                  font-size: 0.9rem;
+                  font-weight: 600;
+                  margin-bottom: 8px;
+                  display: block;
+                "
+                >Additional Notes</label
+              >
+              <textarea
+                class="form-control p-3"
+                id="message"
+                name="message"
+                placeholder="Any special requests..."
+                rows="3"
+                style="
+                  background: rgba(255, 255, 255, 0.95);
+                  border: 2px solid #ddd;
+                  border-radius: 8px;
+                  transition: all 0.3s;
+                  resize: vertical;
+                "
+              ></textarea>
+            </div>
+
+            <div class="form-row">
+              <div class="col-12">
+                <button
+                  class="btn btn-block"
+                  id="sendMessageButton"
+                  style="
+                    height: 50px;
+                    background: linear-gradient(
+                      135deg,
+                      #f9a392 0%,
+                      #f56649 100%
+                    );
+                    color: white;
+                    border: none;
+                    border-radius: 8px;
+                    font-weight: 700;
+                    font-size: 15px;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    transition: all 0.3s;
+                    box-shadow: 0 4px 15px rgba(249, 163, 146, 0.3);
+                  "
+                  type="submit"
+                  onmouseover="
+                    this.style.transform = 'translateY(-3px)';
+                    this.style.boxShadow =
+                      '0 8px 20px rgba(249, 163, 146, 0.4)';
+                  "
+                  onmouseout="
+                    this.style.transform = 'translateY(0)';
+                    this.style.boxShadow =
+                      '0 4px 15px rgba(249, 163, 146, 0.3)';
+                  "
+                >
+                  <i class="fas fa-check-circle mr-2"></i>Book Appointment
+                </button>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
     </div>
-    <!-- Service End -->
+    <!-- Appointment End -->
 
     <!-- Open Hours Start -->
 
@@ -606,11 +1395,13 @@
           <div class="col-lg-6" style="min-height: 300px">
             <div class="position-relative h-100">
               <img
-                alt="Zamy Massage &amp; Waxing"
+                alt="Relaxing Massage and Waxing Services in London"
                 class="position-absolute w-100 h-100"
-                src="img/carousel-1.jpg
-"
+                src="img/carousel-1.jpg"
                 style="object-fit: cover"
+                loading="lazy"
+                width="800"
+                height="600"
               />
             </div>
           </div>
@@ -623,7 +1414,7 @@
                 Mobile Massage &amp; Waxing Service
               </h6>
 
-              <h1 class="mb-4">Experience Ultimate Relaxation</h1>
+              <h2 class="mb-4">Experience Ultimate Relaxation</h2>
 
               <p>
                 Indulge in a serene escape with my premier mobile massage and
@@ -665,7 +1456,7 @@
             <div
               class="d-flex align-items-center justify-content-between border-bottom border-primary p-4"
             >
-              <h1 class="mb-0" style="font-size: 2rem">Male Waxing</h1>
+              <h3 class="mb-0" style="font-size: 2rem">Male Waxing</h3>
             </div>
 
             <div class="p-4" style="height: 300px">
@@ -704,7 +1495,7 @@
             <div
               class="d-flex align-items-center justify-content-between border-bottom border-primary p-4"
             >
-              <h1 class="mb-0" style="font-size: 2rem">Female Waxing</h1>
+              <h3 class="mb-0" style="font-size: 2rem">Female Waxing</h3>
             </div>
 
             <div class="p-4" style="height: 300px">
@@ -743,7 +1534,7 @@
             <div
               class="d-flex align-items-center justify-content-between border-bottom border-primary p-4"
             >
-              <h1 class="mb-0" style="font-size: 2rem">Massage Per hour</h1>
+              <h3 class="mb-0" style="font-size: 2rem">Massage Per hour</h3>
             </div>
 
             <div class="p-4" style="height: 300px">
@@ -763,15 +1554,45 @@
                 <p>Promotion 2 hours</p>
                 <span>&pound;140</span>
               </div>
+              <p
+                style="
+                  font-size: 0.9em;
+                  color: #28a745;
+                  margin-top: 5px;
+                  font-weight: bold;
+                "
+              >
+                <i class="fa fa-star mr-1"></i>+ FREE Body Scrub
+              </p>
               <div class="d-flex justify-content-between">
                 <p>Body Scrub</p>
                 <span>&pound;40</span>
               </div>
-              <div class="mt-3 pt-3 border-top">
-                <p class="text-center mb-0">
-                  <small><strong>+ £20 transport fee</strong></small>
-                </p>
-              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Transport Fee Notice -->
+        <div class="row mt-4">
+          <div class="col-12">
+            <div
+              class="alert alert-info text-center"
+              style="
+                background-color: #d1ecf1;
+                border: 2px solid #bee5eb;
+                border-radius: 8px;
+                padding: 20px;
+              "
+            >
+              <i class="fas fa-car" style="font-size: 24px; color: #0c5460"></i>
+              <h5 class="mt-2 mb-2" style="color: #0c5460; font-weight: bold">
+                Mobile Service Transport Fee
+              </h5>
+              <p class="mb-0" style="color: #0c5460; font-size: 18px">
+                <strong
+                  >+ £20 transport fee applies to all massage services</strong
+                >
+              </p>
             </div>
           </div>
         </div>
@@ -801,13 +1622,42 @@
               care and comfort.
             </p>
 
-            <p>London, UK</p>
+            <p><i class="fa fa-map-marker-alt mr-2"></i>London, UK</p>
 
-            <p>+44 7399844722</p>
+            <p><i class="fa fa-phone-alt mr-2"></i>+44 7399844722</p>
 
-            <p>Zamaryr@hotmail.com</p>
+            <p><i class="fa fa-envelope mr-2"></i>Zamaryr@hotmail.com</p>
 
-            <div class="d-flex justify-content-start mt-4"></div>
+            <div class="d-flex justify-content-start mt-4">
+              <h5 class="text-white text-uppercase mb-3 mr-4">Follow Us:</h5>
+              <a
+                class="btn btn-outline-light btn-square mr-2"
+                href="https://www.facebook.com/zamymassage"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                class="btn btn-outline-light btn-square mr-2"
+                href="https://www.instagram.com/zamymassage"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                class="btn btn-outline-light btn-square mr-2"
+                href="https://wa.me/447399844722"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="WhatsApp"
+              >
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </div>
           </div>
 
           <div class="col-lg-6 pl-lg-5">
@@ -891,6 +1741,180 @@
     <script src="mail/contact.js"></script>
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "@id": "https://www.zamymassageandwax.com",
+        "name": "Zamy London Mobile Massage & Waxing",
+        "image": "https://www.zamymassageandwax.com/img/logo.png",
+        "url": "https://www.zamymassageandwax.com",
+        "telephone": "+447399844722",
+        "email": "Zamaryr@hotmail.com",
+        "priceRange": "£40-£140",
+        "description": "Professional London mobile massage and waxing services. Qualified therapist with 15+ years experience. Swedish massage, deep tissue, lymphatic drainage, and full body waxing. Home visits throughout Greater London.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "London",
+          "addressRegion": "Greater London",
+          "addressCountry": "GB"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 51.5074,
+          "longitude": -0.1278
+        },
+        "serviceArea": {
+          "@type": "City",
+          "name": "Greater London"
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "09:00",
+          "closes": "21:00"
+        },
+        "sameAs": [
+          "https://www.facebook.com/zamymassage",
+          "https://www.instagram.com/zamymassage"
+        ],
+        "areaServed": {
+          "@type": "City",
+          "name": "London"
+        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "London Mobile Massage and Waxing Services",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Swedish Massage London",
+                "description": "Professional Swedish massage therapy - 1 hour - delivered to your home in London"
+              },
+              "price": "70",
+              "priceCurrency": "GBP"
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Deep Tissue Massage London",
+                "description": "Professional deep tissue massage - 1 hour - mobile service across Greater London"
+              },
+              "price": "70",
+              "priceCurrency": "GBP"
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Lymphatic Drainage Massage London",
+                "description": "Therapeutic lymphatic drainage - 1 hour - mobile home visits available"
+              },
+              "price": "100",
+              "priceCurrency": "GBP"
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "2 Hour London Massage Promotion",
+                "description": "Extended 2-hour massage therapy package - mobile service"
+              },
+              "price": "140",
+              "priceCurrency": "GBP"
+            }
+          ]
+        }
+      }
+    </script>
+
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.zamymassageandwax.com/"
+          }
+        ]
+      }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What types of massage do you offer?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We offer Swedish massage, deep tissue massage, lymphatic drainage massage, and body scrub treatments. All massages are 1 hour except our 2-hour promotion package."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you offer mobile massage services?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes! We provide mobile massage and waxing services throughout London. A £20 transport fee applies to all massage services."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How much does a massage cost?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Swedish massage and deep tissue massage are £70 for 1 hour. Lymphatic drainage massage is £100 for 1 hour. We also offer a 2-hour promotion for £140. Transport fee of £20 applies to all massage services."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What waxing services do you provide?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We offer both male and female waxing services including full body wax, Hollywood, Brazilian, underarm, brows, full legs, and half legs waxing."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I book an appointment?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You can book an appointment by calling us at +44 7399844722, emailing Zamaryr@hotmail.com, or using the booking form on our website."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What areas in London do you serve?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We provide mobile massage and waxing services throughout Greater London. Contact us to confirm availability in your area."
+            }
+          }
+        ]
+      }
+    </script>
+
     <script>
       window.addEventListener("load", function () {
         const shouldScroll = sessionStorage.getItem("scrollToAppointment");
@@ -900,6 +1924,38 @@
             appointmentSection.scrollIntoView({ behavior: "smooth" });
           }
           sessionStorage.removeItem("scrollToAppointment");
+        }
+      });
+
+      // Welcome Banner Functionality
+      document.addEventListener("DOMContentLoaded", function () {
+        const closeBannerBtn = document.getElementById("closeBanner");
+        const welcomeBanner = document.getElementById("welcomeBanner");
+
+        if (closeBannerBtn) {
+          closeBannerBtn.addEventListener("click", function () {
+            welcomeBanner.style.animation = "slideDown 0.5s ease-out reverse";
+            setTimeout(() => {
+              welcomeBanner.style.display = "none";
+              localStorage.setItem("welcomeBannerClosed", "true");
+            }, 500);
+          });
+        }
+
+        // Check if banner was previously closed
+        if (localStorage.getItem("welcomeBannerClosed")) {
+          welcomeBanner.style.display = "none";
+        }
+
+        // Book Now button in banner
+        const bookNowBanner = document.querySelector(".book-now-banner");
+        if (bookNowBanner) {
+          bookNowBanner.addEventListener("click", function () {
+            const appointmentSection = document.querySelector("#appointment");
+            if (appointmentSection) {
+              appointmentSection.scrollIntoView({ behavior: "smooth" });
+            }
+          });
         }
       });
     </script>
